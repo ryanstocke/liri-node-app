@@ -109,21 +109,33 @@ function showMovie(movieName) {
     console.log("If you haven't watched Mr. Nobody then you should: <http://www.imdb.com/title/tt0485947/>. It's on Netflix!");
   } else{
   var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+  var divider = "\n------------------------------------------------------------\n\n";
   axios.get(queryUrl).then(
     function(response) {
         var movieData = response.data;
-        // console.log(movieData);
-        var movie = {
-          title: movieData.Title,
-          year: movieData.Year,
-          IMDBrating: movieData.imdbRating,
-          rottenTomatoesRating: movieData.Ratings[1],
-          country: movieData.Country,
-          language: movieData.Language,
-          plot: movieData.Plot,
-          actors: movieData.Actors
-        }
+        console.log(movieData);
+        var movie = [
+          "Title: " + movieData.Title,
+          "Year: " + movieData.Year,
+          "IMDBrating: " + movieData.imdbRating,
+          "Rotten Tomatoes Rating: " + movieData.Ratings[1].Value,
+          "Country: " + movieData.Country,
+          "Language: " + movieData.Language,
+          "Plot: " + movieData.Plot,
+          "Actors: " + movieData.Actors
+        ].join("\r\n");
+        console.log("---------------------------------------");
         console.log(movie);
+        console.log("---------------------------------------");
+        
+        fs.appendFile("log.txt", movie + divider, function (err) {
+    
+            if (err) {
+              return console.log(err);
+            }
+            console.log("log.txt was updated!");
+    
+          });
       });
     }};
 
@@ -135,16 +147,28 @@ function showBand(bandName) {
     if (bandName === ""){
         bandName = "Muse"
     } var queryUrl = "https://rest.bandsintown.com/artists/" + bandName + "/events?app_id=codingbootcamp";
+    var divider = "\n------------------------------------------------------------\n\n";
         axios.get(queryUrl).then(
             function(response) {
                 var bandData = response.data[0];
                 // console.log(bandData);
-                var band = {
-                 venueName: bandData.venue.name,
-                 venueLocation: bandData.venue.city,
-                 date: moment(bandData.datetime).format("MM-DD-YYYY")
-                }
+                var band = [
+                 "Venue Name: " + bandData.venue.name,
+                 "Venue Location: " + bandData.venue.city,
+                 "Date: " + moment(bandData.datetime).format("MM-DD-YYYY")
+                ].join("\r\n");
+                console.log("---------------------------------------");
                 console.log(band);
+                console.log("---------------------------------------");
+                
+                fs.appendFile("log.txt", band + divider, function (err) {
+            
+                    if (err) {
+                      return console.log(err);
+                    }
+                    console.log("log.txt was updated!");
+            
+                  });
             })
 };
 

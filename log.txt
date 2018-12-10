@@ -1,18 +1,21 @@
-Name: Butterflies and Hurricanes
-Artist: Muse
-Link https://p.scdn.co/mp3-preview/47df1b7f1dd34c67a9732bc9efd37e3e3d28d9bc?cid=d7ab63c4411b47cb9a3d8084552b8bfb
-Album: AbsolutionName: Horses (with PnB Rock, Kodak Black & A Boogie Wit da Hoodie)
-Artist: PnB Rock
-Link https://p.scdn.co/mp3-preview/178320d9f29524f15b141e1dc46fb64fa260147e?cid=d7ab63c4411b47cb9a3d8084552b8bfb
-Album: Horses (with PnB Rock, Kodak Black & A Boogie Wit da Hoodie)Name: Time Is Running Out
-Artist: Muse
-Link https://p.scdn.co/mp3-preview/b326e03624cb098d8387e17aa46669edac0d025a?cid=d7ab63c4411b47cb9a3d8084552b8bfb
-Album: Absolution
-------------------------------------------------------------
-
 Name: Madness
 Artist: Muse
 Link https://p.scdn.co/mp3-preview/2bb1362f5a9c6264811e5904ee986b2edced38a3?cid=d7ab63c4411b47cb9a3d8084552b8bfb
 Album: The 2nd Law
+------------------------------------------------------------
+
+Title: Flubber
+Year: 1997
+IMDBrating: 5.2
+Rotten Tomatoes Rating: 24%
+Country: USA
+Language: English
+Plot: An absent-minded professor discovers "flubber," a rubber-like super-bouncy substance.
+Actors: Robin Williams, Marcia Gay Harden, Christopher McDonald, Ted Levine
+------------------------------------------------------------
+
+Venue Name: iHeartRadio ALTer Ego 2019
+Venue Location: Los Angeles
+Date: 01-19-2019
 ------------------------------------------------------------
 
