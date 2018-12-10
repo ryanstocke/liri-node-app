@@ -87,11 +87,31 @@ function justDoIt (command, searchTerm){
     // case "":
     // showSong();
     // break;
-
+33
   }
 }
 function showMovie(movieName) {
+  if (movieName === "") {
+    movieName = "Mr. Nobody"
+  }
+  var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+  axios.get(queryUrl).then(
+    function(response) {
+      console.log("Release Year: " + response.data.Title);
+    }
+  );
+  
+  // for (var i = 2; i < nodeArgs.length; i++) {
 
+  //   if (i > 2 && i < nodeArgs.length) {
+  //     movieName = movieName + "+" + nodeArgs[i];
+  //   }
+  //   else {
+  //     movieName += nodeArgs[i];
+
+  //   }
+  // }
+ 
   //   * Title of the movie.
   //   * Year the movie came out.
   //   * IMDB Rating of the movie.
@@ -121,33 +141,6 @@ function showRandom() {
   })
 }
 
-// functions
-
-
-
-// 
-
-
-//omdb function
-// for (var i = 2; i < nodeArgs.length; i++) {
-
-//     if (i > 2 && i < nodeArgs.length) {
-//       movieName = movieName + "+" + nodeArgs[i];
-//     }
-//     else {
-//       movieName += nodeArgs[i];
-
-//     }
-//   }
-//   var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
-
-// console.log(queryUrl);
-
-// axios.get(queryUrl).then(
-//   function(response) {
-//     console.log("Release Year: " + response.data.Year);
-//   }
-// );
 
 
 
