@@ -113,7 +113,7 @@ function showMovie(movieName) {
   axios.get(queryUrl).then(
     function(response) {
         var movieData = response.data;
-        console.log(movieData);
+        // console.log(movieData);
         var movie = [
           "Title: " + movieData.Title,
           "Year: " + movieData.Year,
@@ -178,9 +178,9 @@ function showRandom() {
     if (error) {
       return console.log(error);
     }
-    var randomIndex = Math.floor(Math.random() * 3);
-    var randomData = data.split("/")[randomIndex].split(",");
-    console.log(randomData);
+    var randomIndex = Math.floor(Math.random() * 2);
+    var randomData = data.split("/ ")[randomIndex].split(",");
+    // console.log(randomData);
     justDoIt(randomData[0], randomData[1])
   })
 }
