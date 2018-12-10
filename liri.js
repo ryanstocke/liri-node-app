@@ -62,16 +62,27 @@ function showSong(songName) {
     if (err) {
       return console.log('Error occurred: ' + err);
     }
-
+    var divider = "\n------------------------------------------------------------\n\n";
     // console.log(data.tracks.items[0]); 
     var songData = data.tracks.items[0];
-    var song = {
-      name: songData.name,
-      artist: songData.artists[0].name,
-      link: songData.preview_url,
-      album: songData.album.name
-    }
+    var song = [
+      "Name: " + songData.name,
+      "Artist: " + songData.artists[0].name,
+      "Link " + songData.preview_url,
+      "Album: " + songData.album.name
+    ].join("\r\n");
+    console.log("---------------------------------------");
     console.log(song);
+    console.log("---------------------------------------");
+    
+    fs.appendFile("log.txt", song + divider, function (err) {
+
+        if (err) {
+          return console.log(err);
+        }
+        console.log("log.txt was updated!");
+
+      });
   });
 
 }
@@ -137,11 +148,6 @@ function showBand(bandName) {
             })
 };
 
-// * Name of the venue
-
-// * Venue location
-
-// * Date of the Event (use moment to format this as "MM/DD/YYYY") 
 
 function showRandom() {
   fs.readFile("random.txt", "utf8", function (error, data) {

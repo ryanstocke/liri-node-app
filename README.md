@@ -180,8 +180,8 @@ require("dotenv").config();
 
 ### BONUS
 
-* In addition to logging the data to your terminal/bash window, output the data to a .txt file called `log.txt`.
-<!-- process.argv loop and concatinate to add to the log.txt file we need this loop otherwise we only get the first input -->
+<!-- * In addition to logging the data to your terminal/bash window, output the data to a .txt file called `log.txt`. -->
+
 * Make sure you append each command you run to the `log.txt` file. 
 <!-- append -->
 * Do not overwrite your file each time you run a command.
