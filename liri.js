@@ -126,12 +126,12 @@ function showBand(bandName) {
     } var queryUrl = "https://rest.bandsintown.com/artists/" + bandName + "/events?app_id=codingbootcamp";
         axios.get(queryUrl).then(
             function(response) {
-                var bandData = response.data;
-                console.log(bandData);
+                var bandData = response.data[0];
+                // console.log(bandData);
                 var band = {
-                 venueName: bandData.Name,
-                 venueLocation: bandData.Venue,
-                 date: bandData.Date   
+                 venueName: bandData.venue.name,
+                 venueLocation: bandData.venue.city,
+                 date: moment(bandData.datetime).format("MM-DD-YYYY")
                 }
                 console.log(band);
             })
@@ -141,7 +141,7 @@ function showBand(bandName) {
 
 // * Venue location
 
-// * Date of the Event (use moment to format this as "MM/DD/YYYY")
+// * Date of the Event (use moment to format this as "MM/DD/YYYY") 
 
 function showRandom() {
   fs.readFile("random.txt", "utf8", function (error, data) {

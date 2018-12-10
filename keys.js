@@ -6,5 +6,5 @@ exports.spotify = {
 };
 
 // exports.concert = {
-//   id: process.env.
+//   id: process.env.BANDS_ID
 // };
