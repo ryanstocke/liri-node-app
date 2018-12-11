@@ -178,7 +178,7 @@ function showRandom() {
     if (error) {
       return console.log(error);
     }
-    var randomIndex = Math.floor(Math.random() * 2);
+    var randomIndex = 1;
     var randomData = data.split("/ ")[randomIndex].split(",");
     // console.log(randomData);
     justDoIt(randomData[0], randomData[1])
