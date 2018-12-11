@@ -43,30 +43,32 @@ You can even let LIRI perform a random command!
      ```
 
    * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
+     ```
+       * If you haven't watched "Mr. Nobody," then you should: <http://www.imdb.com/title/tt0485947/>
+       * It's on Netflix!
 
-     * If you haven't watched "Mr. Nobody," then you should: <http://www.imdb.com/title/tt0485947/>
-
-     * It's on Netflix!
+     ```
 
 3. `node liri.js concert-this <artist/band name here>`
 
    * This will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
-
-     * Name of the venue
-
-     * Venue location
-
-     * Date of the Event (use moment to format this as "MM/DD/YYYY")
+     ```
+       * Name of the venue
+       * Venue location
+       * Date of the Event (use moment to format this as "MM/DD/YYYY")
+     ```
 
 4. `node liri.js do-what-it-says`
 
    * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
+    ```
+       * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
 
-     * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
-
+    ```
+- - -
 ### BONUS
 * In addition to logging the data to your terminal/bash window, LIRI will also output the data to a .txt file called `log.txt`.
-
+- - -
 ### Technologies Used:
  - node.js
  - Packages used:
